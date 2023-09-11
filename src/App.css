@@ -1,0 +1,28 @@
+.logo{
+  width: 8%;
+  margin: 2em 3em;
+}
+.nav-main{
+  display: flex;
+}
+.nav-items{
+  display: flex;
+  margin-left: 60em;
+}
+.nav-items div{
+  margin-top: 3em;
+  margin-left: 5em;
+  cursor: pointer;  
+  width: 10em;
+}
+.nav-items div:first-child{
+  display: flex;
+}
+.nav-items div:first-child h3{
+  padding-left: .8em;
+}
+.main{
+  font-size: 24px;
+  margin-left: 2.5em;
+  margin-top: 5em;
+}
