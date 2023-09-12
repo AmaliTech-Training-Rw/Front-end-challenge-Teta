@@ -1,3 +1,4 @@
+import React from "react";
 import NaviBar from "../components/navbar";
 import CarouselComponent from "../components/CarouselComponent";
 import Card from "react-bootstrap/Card";
@@ -15,12 +16,10 @@ const HomePage = ()=>{
             <CarouselComponent/>
             <div className="recent mt-5 pb-5">
                 <h1 className="mb-4">Recently viewed</h1>
-                <div className="d-flex mx-5 mt-5 justify-content-around cards" >
-                    <Card style={{width: '28rem'}} className="bg-black border border-3 border-secondary pb- card">
-                        <Card.Img src={Char} className="mx-5"/>
+                <div className="d-flex mx-1 mt-5 justify-content-around cards" >
+                    <Card style={{width: '28rem'}} className="bg-black border border-3 border-secondary  card">
+                        <Card.Img src={Char} className="mx-3"/>
                         <Card.Text className="text-light text-decoration-underline fs-5 mx-5 mb-5">View</Card.Text>
-
-
                     </Card>
                     <Card style={{width: '28rem'}} className="bg-black border border-3 border-secondary mx-5 px-4 card ">
                         <Card.Img src={Char1} style={{width:'17rem'}} className="mx-5"/>
