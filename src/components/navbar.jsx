@@ -7,7 +7,7 @@ import Logo from "../assets/logo.png"
 import Logo1 from "../assets/logo2.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+
 function NaviBar() {
   return (
     <>

@@ -6,6 +6,10 @@ import { useEffect } from 'react'
 import axios from 'axios';
 import Pagination from 'react-bootstrap/Pagination'
 import Footer from '../components/Footer'
+import Char1  from '../assets/char2.png'
+import Char2  from '../assets/char3.png'
+import Semi from '../components/semiNav'
+
 
 const Lister = () =>{
     const [characters, setCharacters] = useState([]);
@@ -28,9 +32,10 @@ const Lister = () =>{
     return(
         <div className='bg-dark main'>
             <NaviBar/>
+            <Semi/>
             <div className='d-flex flex-wrap' style={{marginLeft: "8em"}}>
                 {characters.map((character, index)=> (
-                <Card key={index} style={{width: '28rem'}} className='bg-danger mx-5 mt-5'>
+                <Card key={index} style={{width: '28rem', backgroundColor:"red", marginLeft: "6em"}} className=' mt-5'>
                     <div className='bg-black m-4 rounded' style={{width: '23rem', marginRight: '25em'}} >
                         <Card.Img src={Char}/>
                     </div>
