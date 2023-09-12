@@ -8,7 +8,7 @@ const NotFound=()=>{
 
     const navigate = useNavigate();
     const handleClick = ()=>{
-        navigate('/home')
+        navigate('/')
     }
     return(
         <div  className="bg-dark main " style={{height: "auto"}}>

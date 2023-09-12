@@ -7,7 +7,7 @@ import Logo from "../assets/logo.png"
 import Logo1 from "../assets/logo2.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+
 function NaviBar() {
   return (
     <>
@@ -17,7 +17,7 @@ function NaviBar() {
             <Navbar.Brand href="#">
                 <img src={Logo} alt="logo" className='logo'/>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  style={{marginLeft: 450, backgroundColor: "white", marginTop: -10}} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='toggl mt-5'  style={{ backgroundColor: "white", marginTop: -30}} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -35,7 +35,7 @@ function NaviBar() {
                         <FontAwesomeIcon icon={faSearch} className={`px-3 `}/>
                         Search
                     </Nav.Link>
-                    <Nav.Link href="/home" className="fs-5 mx-5 px-5 px-5 text-white mt-5">Home</Nav.Link>
+                    <Nav.Link href="/" className="fs-5 mx-5 px-5 px-5 text-white mt-5">Home</Nav.Link>
                     <Nav.Link href="/lister" className='fs-5 mx-5 px-5 px-5 text-white mt-5'>Lister</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
