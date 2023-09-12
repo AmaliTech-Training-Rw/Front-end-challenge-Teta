@@ -55,7 +55,7 @@ const Details=()=>{
     }, [result.name]);
 
     return(
-        <div className='bg-dark main vh-100'>
+        <div className='bg-dark main'>
             <NaviBar/>
             { character ? (
                 <div className='mx-5 px-5 d-flex details-main'  style={{marginTop: "6em"}}>
@@ -99,8 +99,8 @@ const Details=()=>{
                             </ul>
                         </div>
                     </div>
-                    <div style={{marginLeft: "35em"}}>
-                    <img src={char} alt="character" style={{width: "48em"}}/>
+                    <div className='details-img-div'>
+                        <img src={char} alt="character" className="details-img" />
                     </div>
                 </div>
                     

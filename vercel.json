@@ -1,6 +1,6 @@
 { 
     "rewrites": [{
-        "source": "/lister", 
-        "destination": "/lister" 
+        "source": "/(.*)", 
+        "destination": "/index.html" 
         }] 
 }

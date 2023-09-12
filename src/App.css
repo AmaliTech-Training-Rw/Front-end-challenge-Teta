@@ -53,6 +53,17 @@ li{
 .toggl{
   margin-left: 250px;
 }
+.details-img{
+  width: 48em;
+}
+.details-img-div{
+  margin-left: 35em;
+}
+@media (max-width: 1028px) {
+  .details-img-div{
+    margin-left: 10em;
+  }
+}
 @media (max-width: 900px) {
   .logo{
     margin-left: .3em;
@@ -67,8 +78,6 @@ li{
   }
   .toggl{
     margin-left: 700px;
-    
-    
   }
   .details-main{
     flex-direction: column;
@@ -76,6 +85,7 @@ li{
   .details-main div>img{
     margin-left: -30em;
   }
+
 }
 .list{
   margin-left: 8em;
@@ -99,5 +109,11 @@ li{
   }
   .list{
     margin-left: 0em;
+  }
+  .details-img{
+    width: 25em;
+  }
+  .details-img-div{
+    margin-left: 29em;
   }
 }
