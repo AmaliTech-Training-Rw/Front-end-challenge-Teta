@@ -17,7 +17,7 @@ function NaviBar() {
             <Navbar.Brand href="#">
                 <img src={Logo} alt="logo" className='logo'/>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  style={{marginLeft: 450, backgroundColor: "white", marginTop: -10}} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='toggl mt-5'  style={{ backgroundColor: "white", marginTop: -30}} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}

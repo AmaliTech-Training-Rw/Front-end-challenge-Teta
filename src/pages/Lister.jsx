@@ -44,11 +44,11 @@ const Lister = () =>{
         <div className='bg-dark main'>
             <NaviBar/>
             <Semi setSearchQuery={setSearchQuery} searchQuery={searchQuery}/>
-            <div className='d-flex flex-wrap' style={{marginLeft: "8em"}}>
+            <div className='d-flex flex-wrap list'>
                 {filteredCharacters.map((character, index)=> (
-                <Card key={index} style={{width: '28rem', backgroundColor:"red", marginLeft: "6em", cursor: "pointer"}} className=' mt-5 ' onClick={()=> handleClick(character.name)}>
+                <Card key={index} style={{width: '28rem', backgroundColor:"red", cursor: "pointer"}} className=' card mt-5 ' onClick={()=> handleClick(character.name)}>
                     <div className='bg-black m-4 rounded' style={{width: '23rem', marginRight: '25em'}} >
-                        <Card.Img src={Char}/>
+                        <Card.Img src={Char1}/>
                     </div>
                     <Card.Body>
                         <Card.Title className='text-light mx-4'>{character.name}</Card.Title>

@@ -13,9 +13,9 @@ const Semi = ({searchQuery, setSearchQuery})=>{
     return(
         <>
         {[false,].map((expand) => (
-          <Navbar key={expand} expand="lg" collapseOnSelect={true} className={`bg-dark pb-4 border-top border-bottom mt-5 px-5`} id="nav">
+          <Navbar key={expand} expand="lg" collapseOnSelect={true} className={`bg-dark pb-4 border-top border-bottom mt-5 px-5 pt-5`} id="nav">
             <Container fluid>
-              <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}  style={{marginLeft: 450, backgroundColor: "white", marginTop: -10}} />
+              <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="toggl"  style={{ backgroundColor: "white", marginTop: -10}} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
