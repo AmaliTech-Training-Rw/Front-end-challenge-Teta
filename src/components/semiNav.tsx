@@ -9,11 +9,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 
-const Semi = ({searchQuery, setSearchQuery})=>{
+interface SemiProps {
+  searchQuery: string; 
+  setSearchQuery: (query: string) => void; 
+}
+const Semi = ({searchQuery, setSearchQuery}: SemiProps)=>{
     return(
         <>
         {[false,].map((expand) => (
-          <Navbar key={expand} expand="lg" collapseOnSelect={true} className={`bg-dark pb-4 border-top border-bottom mt-5 px-5 pt-5`} id="nav">
+          <Navbar expand="lg" collapseOnSelect={true} className={`bg-dark pb-4 border-top border-bottom mt-5 px-5 pt-5`} id="nav">
             <Container fluid>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="toggl"  style={{ backgroundColor: "white", marginTop: -10}} />
               <Navbar.Offcanvas

@@ -8,13 +8,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
+interface Character {
+    name: string;
+    height: string;
+    mass: string;
+    birth_year: string;
+    gender: string;
+    skin_color: string;
+    eye_color: string;
+    hair_color: string;
+    homeworld: string;
+    vehicles: string[];
+}
+
 const Details=()=>{
-    let result = useParams();
+    let result = useParams<{ name: string }>(); 
     // console.log(result.name)
 
-    const [character,setCharacter] = useState(null);
-    const [homeworld, setHomeworld] = useState(null)
-    const [vehicles, setVehicles] = useState([]);
+    const [character, setCharacter] = useState<Character | null>(null);
+    const [homeworld, setHomeworld] = useState<string | null>(null)
+    const [vehicles, setVehicles] = useState<string[]>([]); 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -34,7 +47,7 @@ const Details=()=>{
                     })
 
                 // Getting Vehicles
-                const vehiclePromises = characterData.vehicles.map(async (vehicleUrl) => {
+                const vehiclePromises = characterData.vehicles.map(async (vehicleUrl:string) => {
                     const vehicleResponse = await axios.get(vehicleUrl);
                     return vehicleResponse.data.name;
                 });
@@ -75,8 +88,12 @@ const Details=()=>{
                             </div>
                             <div className='line mx-2'></div>
                             <div>
-                                <h1 className='fw-semibold mx-2'>{character.birth_year}</h1>
-                                <h1 className='fs-3 text-center'>Born</h1>
+                            {character.birth_year && (
+                                    <>
+                                        <h1 className='fw-semibold mx-2'>{character.birth_year}</h1>
+                                        <h1 className='fs-3 text-center'>Born</h1>
+                                    </>
+                                )}
                             </div>
                         </div>
                         <div className='mx-5'>
@@ -84,7 +101,11 @@ const Details=()=>{
                             <h1 className='fs-2 pt-3'>Skin color: {character.skin_color}</h1>
                             <h1 className='fs-2 pt-3'>Eye color: {character.eye_color}</h1>
                             <h1 className='fs-2 pt-3'>Hair color: {character.hair_color}</h1>
-                            <h1 className='fs-2 pt-3'>Home world: {homeworld}</h1>
+                            {homeworld && (
+                                <>
+                                    <h1 className='fs-2 pt-3'>Home world: {homeworld}</h1>
+                                </>
+                            )}
                             <div className='d-flex mt-4'>
                                 <div className='line mx-2'></div>
                                 <h1 className='fs-2 fw-bold mt-1'>Vehicles</h1>

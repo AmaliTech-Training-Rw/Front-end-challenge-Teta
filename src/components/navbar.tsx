@@ -12,9 +12,9 @@ function NaviBar() {
   return (
     <>
       {[false,].map((expand) => (
-        <Navbar key={expand} expand="lg" collapseOnSelect={true} className={`bg-dark mx-5 mb-3`} id="nav">
+        <Navbar expand="lg" className={`bg-dark mx-5 mb-3`} id="nav">
           <Container fluid>
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/" >
                 <img src={Logo} alt="logo" className='logo'/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='toggl mt-5'  style={{ backgroundColor: "white", marginTop: -30}} />
