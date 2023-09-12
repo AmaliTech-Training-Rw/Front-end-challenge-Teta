@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import Char1  from '../assets/char2.png'
 import Char2  from '../assets/char3.png'
 import Semi from '../components/semiNav'
+import { useNavigate } from 'react-router-dom'
 
 
 const Lister = () =>{
@@ -16,6 +17,12 @@ const Lister = () =>{
     const [currentPage, setCurrentPage] = useState(1);
     const [charactersPerPage] = useState(10);
     const [totalCharacters, setTotalCharacters] = useState(0);
+    const navigate = useNavigate();
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleClick =(name)=>{
+        navigate(`/details/${name}`);
+    }
 
     useEffect(()=> {
         const fetchData = async () => {
@@ -29,13 +36,17 @@ const Lister = () =>{
         }
         fetchData();
     }, [currentPage]);
+
+    const filteredCharacters = characters.filter((character) => 
+    character.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
     return(
         <div className='bg-dark main'>
             <NaviBar/>
-            <Semi/>
+            <Semi setSearchQuery={setSearchQuery} searchQuery={searchQuery}/>
             <div className='d-flex flex-wrap' style={{marginLeft: "8em"}}>
-                {characters.map((character, index)=> (
-                <Card key={index} style={{width: '28rem', backgroundColor:"red", marginLeft: "6em"}} className=' mt-5'>
+                {filteredCharacters.map((character, index)=> (
+                <Card key={index} style={{width: '28rem', backgroundColor:"red", marginLeft: "6em", cursor: "pointer"}} className=' mt-5 ' onClick={()=> handleClick(character.name)}>
                     <div className='bg-black m-4 rounded' style={{width: '23rem', marginRight: '25em'}} >
                         <Card.Img src={Char}/>
                     </div>

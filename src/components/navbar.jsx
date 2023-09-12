@@ -35,7 +35,7 @@ function NaviBar() {
                         <FontAwesomeIcon icon={faSearch} className={`px-3 `}/>
                         Search
                     </Nav.Link>
-                    <Nav.Link href="/home" className="fs-5 mx-5 px-5 px-5 text-white mt-5">Home</Nav.Link>
+                    <Nav.Link href="/" className="fs-5 mx-5 px-5 px-5 text-white mt-5">Home</Nav.Link>
                     <Nav.Link href="/lister" className='fs-5 mx-5 px-5 px-5 text-white mt-5'>Lister</Nav.Link>
                 </Nav>
               </Offcanvas.Body>

@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 
-const Semi = ()=>{
+const Semi = ({searchQuery, setSearchQuery})=>{
     return(
         <>
         {[false,].map((expand) => (
@@ -49,9 +49,14 @@ const Semi = ()=>{
                         <FontAwesomeIcon icon={faFilm} className={`px-3 `} style={{color: "red"}}/>
                         Season 4
                     </Nav.Link>
-                    <Nav.Link href="#" className='fs-5 mx-5 text-white mt-3 border d-flex'>
+                    <Nav.Link href="#" className='fs-5 mx-5 text-white mt-3 d-flex'>
                         <FontAwesomeIcon icon={faSearch} className='pt-3 px-4 fs-3' />
-                        <input type="text" className="form-control form-control-sm" placeholder="Search" />
+                        <input 
+                        type="text" 
+                        className="form-control form-control-sm border bg-dark border-light-subtle text-light fs-5" 
+                        placeholder="Search" 
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        />
                     </Nav.Link>
                   </Nav>
                 </Offcanvas.Body>
