@@ -4,7 +4,7 @@ This repository contains a Vite.js and React application that interacts with the
 
 ## Live Demo
 
-You can access the live demo of this application https://challenge1-bbgqm1ml7-gikundirolarissa-amalitechor.vercel.app/.
+You can access the live demo of this application https://challenge1-qmv60ji56-gikundirolarissa-amalitechor.vercel.app/.
 
 ## Installation
 To run this application locally, follow these steps:
