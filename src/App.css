@@ -58,6 +58,13 @@ li{
 }
 .details-img-div{
   margin-left: 35em;
+  background-color: rgba(0, 0.12, 255, 0.05); 
+}
+.link{
+  color: white;
+}
+.link:hover{
+  color: red;
 }
 @media (max-width: 1028px) {
   .details-img-div{

@@ -61,10 +61,10 @@ const Lister = () =>{
                     <Card.Img
                     src={
                         character.imageIndex === 0
-                        ? Char1
+                        ? Char3
                         : character.imageIndex === 1
-                        ? Char2
-                        : Char3
+                        ? Char1
+                        : Char2
                     }
                     style={{height: "28em"}}
                     alt="Character picture"/>

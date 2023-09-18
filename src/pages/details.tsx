@@ -72,7 +72,7 @@ const Details=()=>{
             <NaviBar/>
             { character ? (
                 <div className='mx-5 px-5 d-flex details-main'  style={{marginTop: "6em"}}>
-                    <div>
+                    <div style={{marginLeft: "8em"}}>
                         <FontAwesomeIcon icon={faArrowLeft} className='fs-3 mb-5' style={{color:"red", cursor: "pointer"}} onClick={()=> navigate("/lister")} />
                         <h1 className='fw-bold mx-5' style={{fontSize: "36px"}}> {character.name}</h1>
                         

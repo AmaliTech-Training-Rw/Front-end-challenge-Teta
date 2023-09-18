@@ -1,3 +1,4 @@
+// <reference types="vitest"/>
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -9,5 +10,10 @@ export default defineConfig({
   },
   define:{
     VITE_PROVIDE_JQUERY: true,
-  }
+  },
+  // test: {
+  //   globals: true,
+  //   environment: 'happy-dom',
+  //   setupFiles: "./tests/setup.js"
+  // }
 })

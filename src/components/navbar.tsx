@@ -11,8 +11,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 function NaviBar() {
   return (
     <>
-      {[false,].map((expand) => (
-        <Navbar expand="lg" className={`bg-dark mx-5 mb-3`} id="nav">
+      {[false,].map((expand, index) => (
+        <Navbar key={index} expand="lg" className={`bg-dark mx-5 mb-3`} id="nav">
           <Container fluid>
             <Navbar.Brand href="/" >
                 <img src={Logo} alt="logo" className='logo'/>
@@ -31,12 +31,12 @@ function NaviBar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3 ">
-                    <Nav.Link href='#' className={'fs-5 mx-5 px-5 px-5 text-white mt-5'}>
+                    <Nav.Link href='#' className={'fs-5 mx-5 px-5 px-5 text-white mt-5 link'}>
                         <FontAwesomeIcon icon={faSearch} className={`px-3 `}/>
                         Search
                     </Nav.Link>
-                    <Nav.Link href="/" className="fs-5 mx-5 px-5 px-5 text-white mt-5">Home</Nav.Link>
-                    <Nav.Link href="/lister" className='fs-5 mx-5 px-5 px-5 text-white mt-5'>Lister</Nav.Link>
+                    <Nav.Link href="/" className="fs-5 mx-5 px-5 px-5 text-white mt-5 link">Home</Nav.Link>
+                    <Nav.Link href="/lister" className='fs-5 mx-5 px-5 px-5 text-white mt-5 link'>Lister</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
